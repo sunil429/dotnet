@@ -1,0 +1,12 @@
+D:\Training\dotnet\OOPSDemo\BankLibrary\obj\Debug\net5.0\BankLibrary.csproj.AssemblyReference.cache
+D:\Training\dotnet\OOPSDemo\BankLibrary\obj\Debug\net5.0\BankLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\dotnet\OOPSDemo\BankLibrary\obj\Debug\net5.0\BankLibrary.AssemblyInfoInputs.cache
+D:\Training\dotnet\OOPSDemo\BankLibrary\obj\Debug\net5.0\BankLibrary.AssemblyInfo.cs
+D:\Training\dotnet\OOPSDemo\BankLibrary\obj\Debug\net5.0\BankLibrary.csproj.CoreCompileInputs.cache
+D:\Training\dotnet\OOPSDemo\BankLibrary\bin\Debug\net5.0\BankLibrary.deps.json
+D:\Training\dotnet\OOPSDemo\BankLibrary\bin\Debug\net5.0\BankLibrary.dll
+D:\Training\dotnet\OOPSDemo\BankLibrary\bin\Debug\net5.0\ref\BankLibrary.dll
+D:\Training\dotnet\OOPSDemo\BankLibrary\bin\Debug\net5.0\BankLibrary.pdb
+D:\Training\dotnet\OOPSDemo\BankLibrary\obj\Debug\net5.0\BankLibrary.dll
+D:\Training\dotnet\OOPSDemo\BankLibrary\obj\Debug\net5.0\ref\BankLibrary.dll
+D:\Training\dotnet\OOPSDemo\BankLibrary\obj\Debug\net5.0\BankLibrary.pdb
