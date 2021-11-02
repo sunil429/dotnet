@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRLib", "HRLib\HRLib.csproj", "{C0D08BA0-D776-4890-A92B-C97049FC3D42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCCorporation", "..\ABCCorporation\ABCCorporation\ABCCorporation.csproj", "{CE85CD27-2ED6-480B-A4F4-9DDB3556D45D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0D08BA0-D776-4890-A92B-C97049FC3D42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D08BA0-D776-4890-A92B-C97049FC3D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0D08BA0-D776-4890-A92B-C97049FC3D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D08BA0-D776-4890-A92B-C97049FC3D42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE85CD27-2ED6-480B-A4F4-9DDB3556D45D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE85CD27-2ED6-480B-A4F4-9DDB3556D45D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE85CD27-2ED6-480B-A4F4-9DDB3556D45D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE85CD27-2ED6-480B-A4F4-9DDB3556D45D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B11862C6-DC02-4BCC-9DE8-B38EB38F4704}
+	EndGlobalSection
+EndGlobal
