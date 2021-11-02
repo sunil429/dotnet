@@ -1,0 +1,16 @@
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\bin\Debug\net5.0\DelegateDemoMastek.exe
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\bin\Debug\net5.0\DelegateDemoMastek.deps.json
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\bin\Debug\net5.0\DelegateDemoMastek.runtimeconfig.json
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\bin\Debug\net5.0\DelegateDemoMastek.runtimeconfig.dev.json
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\bin\Debug\net5.0\DelegateDemoMastek.dll
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\bin\Debug\net5.0\ref\DelegateDemoMastek.dll
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\bin\Debug\net5.0\DelegateDemoMastek.pdb
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\obj\Debug\net5.0\DelegateDemoMastek.csproj.AssemblyReference.cache
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\obj\Debug\net5.0\DelegateDemoMastek.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\obj\Debug\net5.0\DelegateDemoMastek.AssemblyInfoInputs.cache
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\obj\Debug\net5.0\DelegateDemoMastek.AssemblyInfo.cs
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\obj\Debug\net5.0\DelegateDemoMastek.csproj.CoreCompileInputs.cache
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\obj\Debug\net5.0\DelegateDemoMastek.dll
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\obj\Debug\net5.0\ref\DelegateDemoMastek.dll
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\obj\Debug\net5.0\DelegateDemoMastek.pdb
+D:\Training\dotnet\DelegateDemoMastek\DelegateDemoMastek\obj\Debug\net5.0\DelegateDemoMastek.genruntimeconfig.cache
