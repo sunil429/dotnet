@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace Assignment.Models
+namespace BlazorWebAsmDemoApp.Server.Models
 {
     public partial class Userdatum
     {

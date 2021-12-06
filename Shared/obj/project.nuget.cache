@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Gt9QgLcEXAXdodY05Om7NK45/m8NzzXyN7EAoQ+pNbml4JTK9GVZRNEIOa+k3pNcPCbYC/vs0J1CKHE6Iz+5MA==",
+  "dgSpecHash": "Mc4hzoZ0C/VyQ9N2DnuaxQE41MLapEJP3yYxKzbCgvl/BkGO5zdiM+gNShM282Z6jaRx39u0VOKiYH8PPmBcsQ==",
   "success": true,
-  "projectFilePath": "D:\\Training\\dotnet\\BlazorEmployeeDemo\\BlazorEmployeeDemo\\Shared\\BlazorEmployeeDemo.Shared.csproj",
+  "projectFilePath": "D:\\Training\\dotnet\\BlazorWebAsmDemoApp\\BlazorWebAsmDemoApp\\Shared\\BlazorWebAsmDemoApp.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

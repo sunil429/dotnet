@@ -1,10 +1,11 @@
 ﻿using System;
+using BlazorWebAsmDemoApp.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace Assignment.Models
+namespace BlazorWebAsmDemoApp.Server.Models
 {
     public partial class trainingContext : DbContext
     {

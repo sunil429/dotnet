@@ -1,0 +1,101 @@
+﻿@page "/calculator"
+
+<h1>Basic Calculator Demo using Blazor</h1>
+<hr />
+<div>
+    <div class="row">
+        <p>First Number</p>
+    </div>
+    <div class="col-sm-4">
+        <input placeholder="Enter first Number"  @bind="num1"  />
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-sm-3">
+        <p>Second Number</p> 
+    </div>
+    <div class="col-sm-4">
+        <input placeholder="Enter Second Number" @bind="num2"   />
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-sm-3">
+        <p>Result</p>
+    </div>
+    <div clss="col-sm-4">
+        <input readonly  @bind="result" />
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-sm-2">
+        <button class="btn btn-warning" @onclick="AddNumbers">Add (+) </button>
+    </div>
+    <div class="col-sm-2">
+        <button class="btn btn-warning" @onclick="SubtractNumbers">Subtract  (-)</button>
+    </div>
+    <div class="col-sm-2">
+        <button class="btn btn-warning" @onclick="MultiplyNumbers">Multiply  (X)</button>
+    </div>
+    <div class="col-sm-2">
+        <button class="btn btn-warning" @onclick="DivideNumbers">Divide  (/)</button>
+    </div>
+</div>
+
+  @code {
+
+      int? num1;
+      int? num2;
+      string result;
+
+      void AddNumbers()
+      {
+          if(num1.HasValue && num2.HasValue)
+          {
+              result = (num1.Value + num2.Value).ToString();
+          }
+          else
+          {
+              result = "Please provide both numbers";
+          }
+      }
+
+      void SubtractNumbers()
+      {
+          if (num1.HasValue && num2.HasValue && num1.Value > num2.Value)
+          {
+              result = (num1.Value - num2.Value).ToString();
+          }
+          else
+          {
+              result = "Please provide both numbers";
+          }
+      }
+      void MultiplyNumbers()
+      {
+          if (num1.HasValue && num2.HasValue)
+          {
+              result = (num1.Value * num2.Value).ToString();
+          }
+          else
+          {
+              result = "Please provide both numbers";
+          }
+      }
+
+      void DivideNumbers()
+      {
+          if (num1.HasValue && num2.HasValue && num1.Value!= 0 && num2.Value!= 0)
+          {
+              result = (num1.Value / num2.Value).ToString();
+          }
+          else 
+          {
+              result = "Please provide both numbers";
+          }
+      }
+
+
+   }

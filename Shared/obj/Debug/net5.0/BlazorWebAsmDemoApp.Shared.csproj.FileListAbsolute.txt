@@ -1,0 +1,12 @@
+D:\Training\dotnet\BlazorWebAsmDemoApp\BlazorWebAsmDemoApp\Shared\bin\Debug\net5.0\BlazorWebAsmDemoApp.Shared.deps.json
+D:\Training\dotnet\BlazorWebAsmDemoApp\BlazorWebAsmDemoApp\Shared\bin\Debug\net5.0\BlazorWebAsmDemoApp.Shared.dll
+D:\Training\dotnet\BlazorWebAsmDemoApp\BlazorWebAsmDemoApp\Shared\bin\Debug\net5.0\ref\BlazorWebAsmDemoApp.Shared.dll
+D:\Training\dotnet\BlazorWebAsmDemoApp\BlazorWebAsmDemoApp\Shared\bin\Debug\net5.0\BlazorWebAsmDemoApp.Shared.pdb
+D:\Training\dotnet\BlazorWebAsmDemoApp\BlazorWebAsmDemoApp\Shared\obj\Debug\net5.0\BlazorWebAsmDemoApp.Shared.csproj.AssemblyReference.cache
+D:\Training\dotnet\BlazorWebAsmDemoApp\BlazorWebAsmDemoApp\Shared\obj\Debug\net5.0\BlazorWebAsmDemoApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\dotnet\BlazorWebAsmDemoApp\BlazorWebAsmDemoApp\Shared\obj\Debug\net5.0\BlazorWebAsmDemoApp.Shared.AssemblyInfoInputs.cache
+D:\Training\dotnet\BlazorWebAsmDemoApp\BlazorWebAsmDemoApp\Shared\obj\Debug\net5.0\BlazorWebAsmDemoApp.Shared.AssemblyInfo.cs
+D:\Training\dotnet\BlazorWebAsmDemoApp\BlazorWebAsmDemoApp\Shared\obj\Debug\net5.0\BlazorWebAsmDemoApp.Shared.csproj.CoreCompileInputs.cache
+D:\Training\dotnet\BlazorWebAsmDemoApp\BlazorWebAsmDemoApp\Shared\obj\Debug\net5.0\BlazorWebAsmDemoApp.Shared.dll
+D:\Training\dotnet\BlazorWebAsmDemoApp\BlazorWebAsmDemoApp\Shared\obj\Debug\net5.0\ref\BlazorWebAsmDemoApp.Shared.dll
+D:\Training\dotnet\BlazorWebAsmDemoApp\BlazorWebAsmDemoApp\Shared\obj\Debug\net5.0\BlazorWebAsmDemoApp.Shared.pdb
