@@ -1,0 +1,12 @@
+D:\Training\dotnet\NUnitDemo\NUnitDemoLib\bin\Debug\net5.0\NUnitDemoLib.deps.json
+D:\Training\dotnet\NUnitDemo\NUnitDemoLib\bin\Debug\net5.0\NUnitDemoLib.dll
+D:\Training\dotnet\NUnitDemo\NUnitDemoLib\bin\Debug\net5.0\ref\NUnitDemoLib.dll
+D:\Training\dotnet\NUnitDemo\NUnitDemoLib\bin\Debug\net5.0\NUnitDemoLib.pdb
+D:\Training\dotnet\NUnitDemo\NUnitDemoLib\obj\Debug\net5.0\NUnitDemoLib.csproj.AssemblyReference.cache
+D:\Training\dotnet\NUnitDemo\NUnitDemoLib\obj\Debug\net5.0\NUnitDemoLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\dotnet\NUnitDemo\NUnitDemoLib\obj\Debug\net5.0\NUnitDemoLib.AssemblyInfoInputs.cache
+D:\Training\dotnet\NUnitDemo\NUnitDemoLib\obj\Debug\net5.0\NUnitDemoLib.AssemblyInfo.cs
+D:\Training\dotnet\NUnitDemo\NUnitDemoLib\obj\Debug\net5.0\NUnitDemoLib.csproj.CoreCompileInputs.cache
+D:\Training\dotnet\NUnitDemo\NUnitDemoLib\obj\Debug\net5.0\NUnitDemoLib.dll
+D:\Training\dotnet\NUnitDemo\NUnitDemoLib\obj\Debug\net5.0\ref\NUnitDemoLib.dll
+D:\Training\dotnet\NUnitDemo\NUnitDemoLib\obj\Debug\net5.0\NUnitDemoLib.pdb
