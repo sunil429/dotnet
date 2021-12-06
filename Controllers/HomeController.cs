@@ -1,178 +1,112 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using MVCCoreEFCF_DropDownDemo.Models;
-using MVCCoreEFCF_DropDownDemo.ViewModels;
+using MVCDemoAppMastek.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace MVCCoreEFCF_DropDownDemo.Controllers
+namespace MVCDemoAppMastek.Controllers
 {
     public class HomeController : Controller
     {
-        private EFCFContext db;
-        public HomeController(EFCFContext context)
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
         {
-            db = context;
-        }
-        private void SeedDatabase()
-        {
-            if (db.Products.Any())
-            {
-                return;
-            }
-            List<Category> categoryList = new List<Category>();
-            Category category1 = new Category() { CategoryId = 1, CategoryName = "electronics" };
-            Category category2 = new Category() { CategoryId = 2, CategoryName = "beverages" };
-
-            categoryList.Add(category1);
-            categoryList.Add(category2);
-
-            foreach (var item in categoryList)
-            {
-                db.Categories.Add(item);
-            }
-            db.SaveChanges();
-            List<Product> productList = new List<Product>();
-            Product product1 = new Product() { ProductId = 101, ProductName = "Laptop", Price = 25000, Category = category1 };
-            Product product2 = new Product() { ProductId = 102, ProductName = "Mobile", Price = 35000, Category = category2 };
-
-
-            Product product3 = new Product()
-            {
-                ProductId = 103,
-                ProductName = "tea",
-                Price = 50,
-                Category = category2
-            };
-            Product product4 = new Product() { ProductId = 104, ProductName = "cofee", Price = 150, Category = category2 };
-            productList.Add(product1);
-            productList.Add(product2);
-            productList.Add(product3);
-            productList.Add(product4);
-
-
-            foreach (var item in productList)
-            {
-                db.Products.Add(item);
-            }
-            db.SaveChanges();
-
+            _logger = logger;
         }
 
         public IActionResult Index()
         {
-            SeedDatabase();
-            return View(db.Products.ToList());
-        }
-
-        //[HttpGet]
-
-        //public IActionResult DropdownDemo()
-        //{
-        //    var categoryList = (from c in db.Categories select new SelectListItem() { Text = c.CategoryName, Value = c.CategoryId.ToString() }).ToList();
-        //    categoryList.Insert(0, new SelectListItem() { Text = "-----Select-----", Value = string.Empty });
-
-        //    DropdownViewModel dropDownViewModel = new DropdownViewModel();
-        //    dropDownViewModel.CategoryList = categoryList;
-        //    dropDownViewModel.ProductList = new List<Product>();
-
-        //    string dataserializedata = JsonSerializer.Serialize(dropDownViewModel);
-        //    HttpContext.Session.SetString("dataobj", dataserializedata);
-
-
-        //    return View(dropDownViewModel);
-
-        //}
-
-        //[HttpPost]
-
-        //public IActionResult DropdownDemo(DropdownViewModel viewmodel)
-        //{
-        //    string catid = HttpContext.Session.GetString("dataobj");
-        //    string data = HttpContext.Session.GetString("dataobj");
-        //    DropdownViewModel dropDownViewModel = JsonSerializer.Deserialize<DropdownViewModel>(data);
-
-        //    viewmodel.CategoryList = dropDownViewModel.CategoryList;
-
-        //    if(catid != null)
-        //    {
-        //        var productdata = (from p in db.Products where p.Category.CategoryId == int.Parse(catid) select p).ToList();
-        //        viewmodel.ProductList = productdata;
-        //    }
-
-        //    else
-        //    {
-        //        viewmodel.ProductList = new List<Product>();
-        //    }
-        //    return View(viewmodel);
-
-        //}
-        [HttpGet]
-        public IActionResult DropdownDemo()
-        {
-            var categoryList = (from c in db.Categories
-                                select new SelectListItem()
-                                {
-                                    Text = c.CategoryName,
-                                    Value = c.CategoryId.ToString()
-                                }).ToList();
-            categoryList.Insert(0, new SelectListItem()
-            {
-                Text = "---select----",
-                Value = string.Empty
-            });
-            DropdownViewModel dropdownViewModel = new DropdownViewModel();
-            dropdownViewModel.CategoryList = categoryList;
-            dropdownViewModel.ProductList = new List<Product>();
-            string dataserializedata = JsonSerializer.Serialize(dropdownViewModel);
-            HttpContext.Session.SetString("dataobj", dataserializedata);
-            return View(dropdownViewModel);
-        }
-        [HttpPost]
-        public IActionResult DropdownDemo(DropdownViewModel viewmodel)
-        {
-            string catid = viewmodel.CategoryId;
-
-
-
-            //read session varaible
-            string data = HttpContext.Session.GetString("dataobj");
-            DropdownViewModel dropdownViewModel = JsonSerializer.Deserialize<DropdownViewModel>(data);
-            viewmodel.CategoryList = dropdownViewModel.CategoryList;
-
-
-
-            if (catid != null)
-            {
-                var productdata = (from p in db.Products
-                                   where p.Category.CategoryId == int.Parse(catid)
-                                   select p).ToList();
-                viewmodel.ProductList = productdata;
-            }
-            else
-            {
-                viewmodel.ProductList = new List<Product>();
-            }
-            return View(viewmodel);
+            return View();
         }
 
         public IActionResult Privacy()
         {
+
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Demo()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
-    }
+        //custom route
+        //attribute base routing
+
+        [Route("home/greet/{name?}")]
+        public IActionResult Greet( string name)
+        {
+            ViewBag.msg = "Hello " + name;
+
+            return View("Wish");
+        }
+
+        //parameterised action
+
+        public IActionResult GetData(int id)
+        {
+            ViewBag.msg = "data = " + id;
+            return View();
+        }
+
+
+        [Route("[controller]/[action]/{first:int:range(1,10)}/{second:int}")]
+        public IActionResult AddNumbers(int first, int second)
+        {
+
+            ViewBag.result = $"Addition of {first} + {second} = {first+second}";
+            return View();
+        }
+
+        public IActionResult ModelDemo()
+        {
+
+
+            Employee employee = new Employee()
+            {
+                EmpId = 101,
+                EmpName = "sunil",
+                Salary = 1000
+            };
+            ViewBag.emp = employee;
+            return View();
+        }
+
+        public IActionResult GetEmployeeData()
+        {
+
+            return View();
+        }
+
+        public IActionResult DisplayEmployeeData()
+        {
+            Employee emp = new Employee();
+            emp.EmpId = Convert.ToInt32(Request.Form["txtEmpID"]);
+            emp.EmpName = Request.Form["txtEmpName"];
+            emp.Salary = Convert.ToDouble(Request.Form["txtSalary"]);
+            ViewBag.emp = emp;
+            return View();
+        }
+        public IActionResult STGetEmployeeForm()
+        {
+
+            return View(new Employee());
+        }
+
+        public IActionResult STDisplayEmployee(Employee emp)
+        {
+            if(ModelState.IsValid)
+            {
+                return View(emp);
+            }
+            else
+            {
+                return View ("STGetEmployeeForm");
+            }
+           
+        }
+    } 
 }
-
-

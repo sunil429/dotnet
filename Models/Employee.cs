@@ -1,41 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
-#nullable disable
-
-namespace Assignment.Models
+namespace MVCDemoAppMastek.Models
 {
-    public partial class Employee
+    public class Employee
     {
-        public Employee()
-        {
-            EmployeeTerritories = new HashSet<EmployeeTerritory>();
-            InverseReportsToNavigation = new HashSet<Employee>();
-            Orders = new HashSet<Order>();
-        }
+        [Required(ErrorMessage = "EmpId is compulsory field")]
+        [RegularExpression(@"[0-9]{4}", ErrorMessage = "Enter four digit EmpId")]
+        public int? EmpId { get; set; }
 
-        public int EmployeeId { get; set; }
-        public string LastName { get; set; }
-        public string FirstName { get; set; }
-        public string Title { get; set; }
-        public string TitleOfCourtesy { get; set; }
-        public DateTime? BirthDate { get; set; }
-        public DateTime? HireDate { get; set; }
-        public string Address { get; set; }
-        public string City { get; set; }
-        public string Region { get; set; }
-        public string PostalCode { get; set; }
-        public string Country { get; set; }
-        public string HomePhone { get; set; }
-        public string Extension { get; set; }
-        public byte[] Photo { get; set; }
-        public string Notes { get; set; }
-        public int? ReportsTo { get; set; }
-        public string PhotoPath { get; set; }
+        [Required(ErrorMessage = "EmpId is compulsory field")]
+        [StringLength(10, ErrorMessage = "Maximum EmpName length is 10 characters")]
+        public string EmpName { get; set; }
 
-        public virtual Employee ReportsToNavigation { get; set; }
-        public virtual ICollection<EmployeeTerritory> EmployeeTerritories { get; set; }
-        public virtual ICollection<Employee> InverseReportsToNavigation { get; set; }
-        public virtual ICollection<Order> Orders { get; set; }
+        [Required(ErrorMessage = "Salary is compulsory field")]
+        public double? Salary { get; set; }
     }
 }

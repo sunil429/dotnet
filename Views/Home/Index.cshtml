@@ -1,23 +1,26 @@
-﻿@model IEnumerable<Product>
-@{
+﻿@{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
-<table class="table-striped">
-    <tr>
-        <th>ProductId</th>
-        <th>ProductName</th>
-        <th>Price</th>
-    </tr>
 
-    @foreach (Product item in Model)
-            {
-                <tr>
-                    <td>@item.ProductId</td>
-                    <td>@item.ProductName</td>
-                    <td>@item.Price</td>
-                </tr>
-            }
-</table>
+<h1>Specify your preference</h1>
+
+<form asp-action="WriteCookies" asp-controller="DataPersistance">
+    <select name="setting">
+        <option value="fontName">Font Name</option>
+        <option value="fontSize">Font Size</option>
+        <option value="color">Color</option>
+    </select>
+    <input type="text" name="settingValue" />
+    <input type="checkbox" name="isPersistent" value="true" /> Is Persistent?
+    <input type="submit" value="Write Cookie" />
+</form>
+
+<h4>@ViewBag.Message</h4>
+<h4>
+
+    <a asp-action="ReadCookies" asp-controller="DataPersistent">
+        Read Cookies
+    </a>
+</h4>

@@ -1,6 +1,6 @@
 using System;
 
-namespace MVCCoreEFCF_DropDownDemo.Models
+namespace MVCDemoAppMastek.Models
 {
     public class ErrorViewModel
     {

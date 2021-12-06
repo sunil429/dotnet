@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MVCDemoAppMastek.ViewModels.EmpDeptViewModel>
+@{
+    ViewData["Title"] = "ViewModelDemo";
+}
+
+<h1>ViewModelDemo</h1>
+
+<table class="table-bordered">
+    <tr>
+        <th>EmpNo</th>
+        <th>Emp Name</th>
+        <th>Job</th>
+        <th>Years Completed</th>
+        <th>Salary</th>
+        <th>Dept Name</th>
+        <th>Location</th>
+    </tr>
+
+    @foreach(var item in Model)
+     {
+                <tr>
+                    <td>@item.Employee.Empno</td>
+                    <td>@item.Employee.Ename</td>
+                    <td>@item.Employee.Job</td>
+                    <td style="text-align:center">@item.YearsCompleted</td>
+                    <td style="color:@item.SalaryColor;font-weight:bolder">@item.Employee.Sal</td>
+                   @*<td>item.Department.Dname</td>
+                    <td>@item.Department.Loc</td>*@
+                    <td>@item.DeptName</td>
+                    <td>@item.Location</td>
+                </tr>
+      
+     }
+
+
+</table>

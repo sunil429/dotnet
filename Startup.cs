@@ -1,17 +1,17 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MVCCoreEFCF_DropDownDemo.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MVCDemoAppMastek.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace MVCCoreEFCF_DropDownDemo
+namespace MVCDemoAppMastek
 {
     public class Startup
     {
@@ -26,12 +26,20 @@ namespace MVCCoreEFCF_DropDownDemo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
-            string connstr = Configuration.GetConnectionString("MyDBConnection");
-
-            services.AddDbContext<EFCFContext>(options => { options.UseSqlServer(connstr); });
-
             services.AddSession();
+
+            //register operationservice for di
+            services.AddTransient<ITransientService, OperationService>();
+
+            services.AddScoped<IScopedService, OperationService>();
+
+            services.AddSingleton<ISingletonService, OperationService>();
+
+           // register your class for di
+
+            services.AddScoped<ProductDataStore>();
+
+            services.AddDbContext<trainingContext>(options => options.UseSqlServer(Configuration.GetConnectionString("trainingConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,9 +59,9 @@ namespace MVCCoreEFCF_DropDownDemo
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseSession();
 
             app.UseAuthorization();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
