@@ -1,0 +1,25 @@
+﻿@model Assignment.ViewModels.RadioDemoViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<form asp-action="Index" method="post">
+    @foreach (var item in Model.CountryList)
+    {
+        <input type="radio" name="country" id="@item" value="@item" asp-action="@Model.Country" onchange="this.form.submit()" />
+        <label for="@item">@item</label>
+        <br />
+    }
+</form>
+<table class="table-striped">
+    @foreach (var item in Model.Employees)
+    {
+        <tr>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@item.Country</td>
+        </tr>
+    }
+</table>
