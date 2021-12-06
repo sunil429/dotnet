@@ -1,0 +1,73 @@
+﻿@inject HttpClient Http;
+
+@using BlazorEmployeeDemo.Shared;
+
+
+<h3>AddEmployee</h3>
+
+<div class="card">
+    <div class="card-header">
+        Add an Employee
+    </div>
+    <div class="card-body">
+        <EditForm Model="@employeeModel" OnValidSubmit="@HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="form-group">
+                <label for="empnoInput">EmpNo</label>
+                <InputNumber class="form-control" id="empnoInput" @bind-Value="employeeModel.EmpNo" />
+            </div>
+
+            <div class="form-group">
+                <label for="empnameInput">EmpName</label>
+                <InputText class="form-control" id="empnameInput" @bind-Value="employeeModel.EmpName" />
+            </div>
+
+            <div class="form-group">
+                <label for="dateInput">HireDate</label>
+                <InputDate class="form-control" id="dateInput" @bind-Value="employeeModel.HireDate" />
+            </div>
+
+            <div class="form-group">
+                <label for="salaryInput">Salary</label>
+                <InputNumber class="form-control" id="salaryInput" @bind-Value="employeeModel.Salary" />
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </EditForm>
+
+    </div>
+</div>
+
+@code {
+
+    private EmployeeModel employeeModel = new EmployeeModel() { HireDate = DateTime.Today };
+
+    //work like HTML attribute for our custom component
+    [Parameter]
+    public EventCallback OnSubmitCallback { get; set; }
+
+
+    public async Task HandleValidSubmit()
+    {
+        await Http.PostAsJsonAsync<EmployeeModel>("api/Employees", employeeModel);
+
+
+        await OnSubmitCallback.InvokeAsync();
+    }
+
+    //private EmployeeModel employeeModel = new EmployeeModel() { HireDate = DateTime.Today };
+
+
+
+
+    //public async Task HandleValidSubmit()
+    //{
+    //    await Http.PostAsJsonAsync<EmployeeModel>("api/Employees", employeeModel);
+    //}
+
+
+}
+

@@ -1,0 +1,12 @@
+D:\Training\dotnet\BlazorEmployeeDemo\BlazorEmployeeDemo\Shared\bin\Debug\net5.0\BlazorEmployeeDemo.Shared.deps.json
+D:\Training\dotnet\BlazorEmployeeDemo\BlazorEmployeeDemo\Shared\bin\Debug\net5.0\BlazorEmployeeDemo.Shared.dll
+D:\Training\dotnet\BlazorEmployeeDemo\BlazorEmployeeDemo\Shared\bin\Debug\net5.0\ref\BlazorEmployeeDemo.Shared.dll
+D:\Training\dotnet\BlazorEmployeeDemo\BlazorEmployeeDemo\Shared\bin\Debug\net5.0\BlazorEmployeeDemo.Shared.pdb
+D:\Training\dotnet\BlazorEmployeeDemo\BlazorEmployeeDemo\Shared\obj\Debug\net5.0\BlazorEmployeeDemo.Shared.csproj.AssemblyReference.cache
+D:\Training\dotnet\BlazorEmployeeDemo\BlazorEmployeeDemo\Shared\obj\Debug\net5.0\BlazorEmployeeDemo.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\dotnet\BlazorEmployeeDemo\BlazorEmployeeDemo\Shared\obj\Debug\net5.0\BlazorEmployeeDemo.Shared.AssemblyInfoInputs.cache
+D:\Training\dotnet\BlazorEmployeeDemo\BlazorEmployeeDemo\Shared\obj\Debug\net5.0\BlazorEmployeeDemo.Shared.AssemblyInfo.cs
+D:\Training\dotnet\BlazorEmployeeDemo\BlazorEmployeeDemo\Shared\obj\Debug\net5.0\BlazorEmployeeDemo.Shared.csproj.CoreCompileInputs.cache
+D:\Training\dotnet\BlazorEmployeeDemo\BlazorEmployeeDemo\Shared\obj\Debug\net5.0\BlazorEmployeeDemo.Shared.dll
+D:\Training\dotnet\BlazorEmployeeDemo\BlazorEmployeeDemo\Shared\obj\Debug\net5.0\ref\BlazorEmployeeDemo.Shared.dll
+D:\Training\dotnet\BlazorEmployeeDemo\BlazorEmployeeDemo\Shared\obj\Debug\net5.0\BlazorEmployeeDemo.Shared.pdb

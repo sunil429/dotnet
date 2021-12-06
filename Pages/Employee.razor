@@ -1,0 +1,152 @@
+﻿@page "/employee"
+
+
+@inject HttpClient Http;
+
+@using BlazorEmployeeDemo.Shared;
+@using BlazorEmployeeDemo.Client.Components;
+
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class=" card-header">
+                Employee data
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>EmpNo</th>
+                            <th>EmpName</th>
+                            <th>HireDate</th>
+                            <th>Salary</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (employees == null)
+                          {
+                            <tr><td><em>Loading....</em></td></tr>
+                          }
+                         else
+                         {
+                            @foreach (var employee in employees)
+                             {
+                               <tr>
+                                   <td>@employee.EmpNo.ToString()</td>
+                                   <td>@employee.EmpName</td>
+                                   <td>@employee.</td>
+
+
+                               </tr>
+
+
+
+
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4"></div>
+    <AddEmployee OnSubmitCallback="@Refresh"+  ></AddEmployee>
+</div>
+
+<h3>Employee</h3>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                Employee Data
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>EmpNo</th>
+                            <th>EmpName</th>
+                            <th>HireDate</th>
+                            <th>Salary</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (employees == null)
+                        {
+                            <tr><td><em>Loading...</em></td></tr>
+                        }
+                        else
+                        {
+                            @foreach (var employee in employees)
+                            {
+                                <tr>
+                                    <td>@employee.EmpNo.ToString()</td>
+                                    <td>@employee.EmpName</td>
+                                    <td>@employee.HireDate.ToString()</td>
+                                    <td>@employee.Salary.ToString()</td>
+
+
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        @*add form design for Add Employee *@
+    </div>
+
+</div>
+
+@code {
+    //Bind Property - Which we use in our design
+    private EmployeeModel[] employees;
+
+    //protected async override Task OnInitializedAsync()
+    //{
+    //    // give call to api “Get” action
+    //    employees = await Http.GetFromJsonAsync<EmployeeModel[]>("api/Employees");
+
+    //    //Notify the component that its state has changed
+    //    //this will cause component to be re-render
+    //    StateHasChanged();
+    //}
+
+
+    protected async override Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        employees = await Http.GetFromJsonAsync<EmployeeModel[]>("api/Employees");
+
+        StateHasChanged();
+    }
+
+
+    public async void Refresh()
+    {
+        await LoadData();
+    }
+    ////Bind Property - Which we use in our design
+    //private EmployeeModel[] employees;
+
+    //protected async override Task OnInitializedAsync()
+    //{
+    //    // give call to api “Get” action
+    //    employees = await Http.GetFromJsonAsync<EmployeeModel[]>("api/Employees");
+
+    //    //Notify the component that its state has changed
+    //    //this will cause component to be re-render
+    //    StateHasChanged();
+    //}
+
+}
