@@ -1,6 +1,6 @@
 using System;
 
-namespace Assignment.Models
+namespace MVCCoreEFCF_DropDownDemo.Models
 {
     public class ErrorViewModel
     {
