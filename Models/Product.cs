@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace MVCDemoAppMastek.Models
+#nullable disable
+
+namespace WebAPI_Product.Models
 {
-    public class Product
+    public partial class Product
     {
-
-        public int? ProductId { get; set; }
+        public int ProductId { get; set; }
         public string ProductName { get; set; }
-        public decimal? UnitPrice { get; set; }
+        public decimal Price { get; set; }
+        public int? CategoryId { get; set; }
+
+        public virtual Category Category { get; set; }
     }
 }

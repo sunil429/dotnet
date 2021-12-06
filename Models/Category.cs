@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using MVCCoreEFCF_DropDownDemo.Models;
 
-namespace MVCCoreEFCF_DropDownDemo.Models
+#nullable disable
+
+namespace WebAPI_Product.Models
 {
-    public class Category
+    public partial class Category
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int CategoryId { get; set; }
+        public Category()
+        {
+            Products = new HashSet<Product>();
+        }
 
-        [Column(TypeName ="VARCHAR(20)")]
+        public int CategoryId { get; set; }
         public string CategoryName { get; set; }
 
-        public ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }
